@@ -3,6 +3,8 @@
 
 #include <Arduino.h>
 
+#define MUSIC_PLAYER_MESSAGE_LENGTH 10
+
 class musicPlayer
 {
     public: 
@@ -14,7 +16,7 @@ class musicPlayer
         Stream* ser_;
         bool ready_;
 
-        uint16_t addChecksum(uint8_t * data);
+        uint16_t addChecksum(uint8_t (&data)[MUSIC_PLAYER_MESSAGE_LENGTH]);
 };
 
 #endif

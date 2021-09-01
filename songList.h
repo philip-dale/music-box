@@ -3,7 +3,7 @@
 
 #define NUM_OF_SONGS 5
 
-#define Sm 20
+#define Sm 25
 #define Me 2*Sm
 #define Lo 3*Sm
 #define Vl 4*Sm

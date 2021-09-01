@@ -24,7 +24,7 @@ void setup()
 }
 
 int16_t noteGap = 0;
-uint16_t note;
+uint16_t note = 0;
 int gapSinceSound = 0;
 
 void loop()
