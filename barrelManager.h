@@ -15,7 +15,7 @@ class barrelManager
         barrel* getBarrel();
         void setBarrel(const size_t songIndex);
     private:
-        uint16_t * songList_[NUM_OF_SONGS];
+        const uint16_t * songList_[NUM_OF_SONGS];
         size_t lengthList_[NUM_OF_SONGS];
         size_t songIndex_;
         barrel barrel_;
