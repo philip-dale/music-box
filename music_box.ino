@@ -34,13 +34,13 @@ void loop()
     
         if(gapSinceSound > noteGap)
         {
-            bm.getBarrel()->playForward(note,noteGap);
+            bm.getBarrel()->nextNote(note,noteGap);
             player.play(note);
             gapSinceSound = 0;
         } 
         else if (gapSinceSound < 0)
         {
-            bm.getBarrel()->playBackward(note,noteGap);
+            bm.getBarrel()->previousNote(note,noteGap);
             player.play(note);
             gapSinceSound = noteGap;
         }

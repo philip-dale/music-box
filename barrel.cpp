@@ -9,16 +9,16 @@ barrel::barrel():
     ready_(false)
 {}
 
-void barrel::setup(uint16_t * song, const size_t length)
+void barrel::setup(const uint16_t * song, const size_t length)
 {
     currentIndex_ = 0;
     notes_ = song;
-    gaps_ = (int16_t*)(song+length);
+    gaps_ = (const int16_t*)(song+length);
     length_ = length;
     ready_ = true;
 }
 
-void barrel::playForward(uint16_t & note, int16_t & gap)
+void barrel::nextNote(uint16_t & note, int16_t & gap)
 {
     if(ready_)
     {
@@ -33,7 +33,7 @@ void barrel::playForward(uint16_t & note, int16_t & gap)
     }
 }
 
-void barrel::playBackward(uint16_t & note, int16_t & gap)
+void barrel::previousNote(uint16_t & note, int16_t & gap)
 {
     if(ready_)
     {
