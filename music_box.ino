@@ -12,12 +12,11 @@ void processRotation()
     re.process();
 }
 
-static barrelManager bm = barrelManager();
+barrelManager bm = barrelManager();
 musicPlayer player = musicPlayer();
 
 void setup()
 {
-    // Serial.begin(9600);
     Serial3.begin(9600); // music player serial port
     player.setup(Serial3);
     re.setup(RE_CLK_PIN, RE_DT_PIN, RE_PUSH_BTN, processRotation);
